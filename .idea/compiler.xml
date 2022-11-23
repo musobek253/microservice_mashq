@@ -7,9 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cilents" />
         <module name="notification" />
         <module name="evrikaService" />
+        <module name="rabbit" />
+        <module name="cilents" />
+        <module name="apigetway" />
         <module name="Froud" />
         <module name="customer" />
       </profile>

@@ -11,6 +11,8 @@
     <module>evrikaService</module>
     <module>cilents</module>
       <module>notification</module>
+      <module>apigetway</module>
+      <module>rabbit</module>
   </modules>
   <packaging>pom</packaging>
 

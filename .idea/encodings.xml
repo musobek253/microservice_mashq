@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Froud/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Froud/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apigetway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apigetway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cilents/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cilents/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/costumer/src/main/java" charset="UTF-8" />
@@ -13,6 +15,8 @@
     <file url="file://$PROJECT_DIR$/evrikaService/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/notification/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/notification/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rabbit/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rabbit/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
