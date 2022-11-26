@@ -8,6 +8,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <groupId>org.example</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>rabbit</name>
+    <description>notification</description>
 
     <artifactId>rabbit</artifactId>
 

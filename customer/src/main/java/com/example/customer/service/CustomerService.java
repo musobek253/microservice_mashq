@@ -9,6 +9,7 @@ import org.example.cilents.fraud.FraudCheckResponse;
 import org.example.cilents.fraud.FraudCilents;
 import org.example.cilents.notification.NotificationCilent;
 import org.example.cilents.notification.NotificationRequest;
+import org.example.rabbit.RabbitMQMessageProducer;
 import org.springframework.stereotype.Service;
 
 
@@ -17,7 +18,7 @@ import org.springframework.stereotype.Service;
 public class CustomerService {
     private final CustomerRepo customerRepo;
     private final FraudCilents fraudCilents;
-    private final NotificationCilent notificationCilent;
+    private final RabbitMQMessageProducer rabbitMQMessageProducer;
     public void registerCustomer(CustomerRequest customerRequest) {
         Customer customer = Customer.builder()
                 .firstName(customerRequest.firstName())
@@ -30,13 +31,20 @@ public class CustomerService {
         if (fraudCheckResponse.isFraudster()){
             throw new IllegalStateException ("fraudster");
         }
-        notificationCilent.sendNotification(
-                new NotificationRequest(
-                        customer.getId(),
-                        customer.getEmail(),
-                        String.format("Hi %s welcome to Musobek....", customer.getFirstName())
-                )
+//        notificationCilent.sendNotification(
+//                new NotificationRequest(
+//                        customer.getId(),
+//                        customer.getEmail(),
+//                        String.format("Hi %s welcome to Musobek....", customer.getFirstName())
+//                )
+//        );
+        NotificationRequest notificationRequest = new NotificationRequest(
+                customer.getId(),
+                customer.getEmail(),
+                String.format("Hi %s welcome to Musobek....", customer.getFirstName())
         );
+
+        rabbitMQMessageProducer.publish(notificationRequest,"internal.exchange","internal.notification.routing-key");
 
     }
 
